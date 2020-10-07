@@ -27,7 +27,8 @@ body {
   position: fixed;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: -1;
 }
 
 a {
@@ -35,11 +36,16 @@ a {
   color: inherit
 }
 
+a:hover,
+button:hover {
+  cursor: pointer;
+}
+
 ol, ul {
   list-style: none;
 }
 
-header {
+body > header {
   height: 100px;
   display: flex;
   justify-content: center;
@@ -64,8 +70,6 @@ header nav ul {
 .menu {
   font-size: 1.5em;
 }
-
-
 
 li:hover,
 .menu:hover {
@@ -101,10 +105,18 @@ li:hover,
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
 }
 
-.sign-up-header {
+.sign-up-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.sign-up-content header {
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 24px;
@@ -118,6 +130,7 @@ form {
   border: 1px solid rgb(186, 186, 186);
   border-radius: 4px;
   min-width: 425px;
+  margin-bottom: 24px;
 }
 
 .input-group {
@@ -138,7 +151,15 @@ form button {
   font-size: 1.8em;
   padding: 18px;
   background: #2C99ED;
+  outline: 1px solid #2C99ED;
   color: #D8D8D8;
+  border-radius: 0 0 4px;
+}
+
+form button:hover {
+  background: #2076d2;
+  color: white;
+  outline: 2=1px solid#2076d2;;
 }
 
 input:focus {
@@ -196,7 +217,18 @@ input:focus ~ .bar:after {
   width: 50%;
 }
 
-footer {
+.sign-up-container footer {
+  font-size: 1.4em;
+  color: #9B9B9B;
+  text-align: center;
+  line-height: 1.8;
+}
+
+.sign-up-container footer a {
+  color: #fff;
+}
+
+body > footer {
   position: absolute;
   width: 100%;
   display: flex;
@@ -205,6 +237,7 @@ footer {
   height: 60px;
   bottom: 0;
   font-size: 1.4em;
+  white-space: nowrap;
 }
 
 footer nav ul {
@@ -223,5 +256,57 @@ footer nav ul li:last-child{
 }
 
 
+@media (max-width: 1200px) { 
+  .main-content {
+    flex-direction: column;
+  }
 
+  .text-container {
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+  }
 
+  .sign-up-container {
+    width: 80%;
+  }
+
+  header nav ul {
+    width: 50%;
+  }
+ }
+
+@media (max-width: 992px) { 
+
+  body > footer {
+    height: auto;
+    position: relative;
+    margin-bottom: 24px;
+  }
+
+  footer  nav {
+    flex-direction: column-reverse;
+  }
+
+  footer nav ul {
+    flex-direction: column;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  footer nav ul li {
+    margin: 12px 0 !important;
+  }
+ }
+
+@media (min-width: 768px) { 
+
+ }
+
+@media (min-width: 576px) {
+  
+ }
