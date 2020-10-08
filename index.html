@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
     integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
     crossorigin="anonymous" />
-  <link rel="stylesheet" href="./style.css">
-  <title>Document</title>
+  <title>FE Code Challenge 02</title>
 </head>
 <body>
   <div class="overlay"></div>
@@ -23,7 +23,7 @@
         <li id="pricing" title="Pricing"><a href="#">Pricing</a></li>
         <li id="contacts" title="Contacts"><a href="#">Contacts</a></li>
       </ul>
-      <div class="menu">
+      <div class="menu" title="Menu">
         <i class="fas fa-bars"></i>
       </div>
     </nav>
@@ -51,9 +51,10 @@
             <label for="email">E-mail</label>
           </div>
           <div class="input-group">
-            <input type="Password" name="password" required>
+            <input type="Password" name="password" class="password" required>
             <span class="bar"></span>
             <label for="password">Password</label>
+            <i class="far fa-eye-slash" title="Show Password"></i>
           </div>
           <button type="submit">Sign up <i class="fas fa-angle-right"></i></button>
         </form>
@@ -70,14 +71,15 @@
     <nav>
       <div>&#169; 2016 Stamp. All Right Reserved</div>
       <ul>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Help</a></li>
-        <li><a href="#">Terms of Use</a></li>
-        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#" title="Contact">Contact</a></li>
+        <li><a href="#" title="Help">Help</a></li>
+        <li><a href="#" title="Terms of Use">Terms of Use</a></li>
+        <li><a href="#" title="Privacy Policy">Privacy Policy</a></li>
       </ul>
     </nav>
   </footer>
 </body>
+<script src='./app.js'></script>
 </html>
 
 

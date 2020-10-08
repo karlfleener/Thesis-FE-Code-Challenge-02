@@ -7,3 +7,5 @@ header, body, and footer should be left and right aligned
 letter spacing inconsistent across page
 
 darken background to increase contrast making increasing text readability
+
+capitalize all words in text container header
