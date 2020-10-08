@@ -1,26 +1,28 @@
+//Selectors
 const navLinks = document.querySelector("header nav ul")
 const menu = document.querySelector(".menu")
 let viewPassword = document.querySelector('.fa-eye-slash')
 const passwordInput = document.querySelector('.password')
 
+//Event listeners
 menu.addEventListener('click', showNavLinks);
 viewPassword.addEventListener('click', viewHidePassword);
+document.addEventListener('click', e => {
+  if (e.target.parentElement !== menu && navLinks.classList.contains('show')) {
+    navLinks.classList.remove('show')
+  }
+})
 
+//Functions
 function showNavLinks(e) {
   e.preventDefault();
 
   navLinks.classList.toggle('show');
 }
 
-document.addEventListener('click', e => {
-  if (e.target.parentElement !== menu && navLinks.classList.contains('show')  ) {
-    navLinks.classList.remove('show')
-  }
-})
-
 function viewHidePassword(e) {
   e.preventDefault();
-  
+
   if (viewPassword.classList.contains("fa-eye-slash")) {
     passwordInput.type = "text"
     viewPassword.classList.remove("fa-eye-slash")
