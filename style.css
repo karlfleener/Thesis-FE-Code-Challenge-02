@@ -328,14 +328,14 @@ footer nav ul li:last-child{
   body > footer {
     height: auto;
     /* position: relative; */
-    bottom: -140px;
+    bottom: -160px;
     margin-bottom: 24px;
   }
 
   .main-content {
     margin-bottom: 24px;
-    outline: 1px solid pink;
   }
+
 
   footer  nav {
     flex-direction: column-reverse;
@@ -363,9 +363,6 @@ footer nav ul li:last-child{
  }
 
 @media (max-width: 576px) {
-.main-content {
-  margin-bottom: 130px;
-}
 
   .text-container h1 {
     font-size: 3.5em;
@@ -381,6 +378,10 @@ footer nav ul li:last-child{
 
   form {
     min-width: 100%;
+  }
+
+  body > footer {
+    bottom: -180px;
   }
 
  }
